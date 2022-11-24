@@ -1,6 +1,10 @@
 #include <iostream>
 #include <random>
 
+// written by chapel1337
+// made on 11/23/2022
+// terrible program, please look at some of my other projects before coming to conclusions
+
 int getRandom(int minimum, int maximum)
 {
 	std::mt19937 mt{ std::random_device{}() };
