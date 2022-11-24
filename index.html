@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<!-- written by chapel1337 -->
+<!-- made on 11/23/2022 -->
+
+<head>
+    <title> ㅤ </title>
+
+    <style>
+        body {
+            overflow-x: hidden;
+            background-color: black;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id = "output1"></p>
+
+    <script defer>
+        let numbers = [];
+
+        function setNumbers()
+        {
+            for (let i = 1; i < 15; i++)
+            {
+                numbers.push(Math.floor(Math.random() * 2));
+            }
+        }
+
+        function displayNumbers()
+        {
+            setNumbers();
+
+            for (let i = 0; i < numbers.length; i++)
+            {
+                document.getElementById("output1").innerHTML += (numbers[i]) ? "1\n" : "0\n";
+            }
+
+            window.scrollTo(0, document.body.scrollHeight - 950);
+        }
+
+        function refresh()
+        {
+            window.location.reload();
+        }
+
+        setInterval(refresh, 75000); // for precaution
+        setInterval(displayNumbers, 0);
+    </script>
+
+</body>
+</html>
